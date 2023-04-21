@@ -391,21 +391,27 @@
 </tr>
 <tr>
 <td>backCode</td>
-<td>退单代码</td>
+<td>退单原因（code）</td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td>returnReasonConfigId</td>
-<td>回单代码</td>
+<td><del>returnReasonConfigId</del></td>
+<td><del>退单原因（code）</del></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>subReturnReasonName</td>
-<td>退单原因</td>
+<td>退单原因（value）</td>
 <td></td>
 <td></td>
+</tr>
+<tr>
+<td>dealDesc</td>
+<td>处理描述&#x2F;备注</td>
+<td></td>
+<td>0【否】</td>
 </tr>
 <tr>
 <td>isSend</td>
@@ -414,14 +420,8 @@
 <td></td>
 </tr>
 <tr>
-<td>remark</td>
-<td>处理描述</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td></td>
-<td></td>
+<td>noticeContent</td>
+<td>通知内容</td>
 <td></td>
 <td></td>
 </tr>
@@ -429,7 +429,7 @@
 <blockquote>
 <p><strong>请求参数</strong></p>
 </blockquote>
-<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;billId&quot;</span><span class="punctuation">:</span><span class="string">&quot;400823&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;backCode&quot;</span><span class="punctuation">:</span><span class="string">&quot;1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;returnReasonConfigId&quot;</span><span class="punctuation">:</span><span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;subReturnReasonName&quot;</span><span class="punctuation">:</span><span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isSend&quot;</span><span class="punctuation">:</span><span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;remark&quot;</span><span class="punctuation">:</span><span class="string">&quot;测试&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;billId&quot;</span><span class="punctuation">:</span><span class="string">&quot;400823&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;backCode&quot;</span><span class="punctuation">:</span><span class="string">&quot;1&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;subReturnReasonName&quot;</span><span class="punctuation">:</span><span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;isSend&quot;</span><span class="punctuation">:</span><span class="string">&quot;&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;dealDesc&quot;</span><span class="punctuation">:</span><span class="string">&quot;测试&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
 
 <blockquote>
 <p><strong>响应结果</strong></p>
