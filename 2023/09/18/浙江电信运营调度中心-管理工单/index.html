@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><title>浙江电信运营调度中心-管理工单 | 接口文档</title><meta name="description" content="浙江电信运营调度中心-管理工单 - zxp"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" href="/dev_doc/favicon.png"><link rel="stylesheet" href="/dev_doc/css/theme.css"><link rel="search" type="application/opensearchdescription+xml" href="/dev_doc/atom.xml" title="接口文档"><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/dev_doc/atom.xml" title="接口文档" type="application/atom+xml">
+</head><body><div class="wrap"><header><h1 class="branding"><a href="/dev_doc/" title="接口文档"><img class="logo-image" src="/dev_doc/logo.png" alt="logo"></a></h1><ul class="nav nav-list"><li class="nav-list-item"><a class="nav-list-link" href="/dev_doc/" target="_self">HOME</a></li><li class="nav-list-item"><a class="nav-list-link" href="/dev_doc/archives" target="_self">ARCHIVES</a></li></ul></header><main class="container"><div class="post"><article class="post-block"><h1 class="post-title">浙江电信运营调度中心-管理工单</h1><div class="post-info"><a></a>2023-09-18</div><div class="post-content"><h1><span id="管理工单">管理工单</span></h1><!-- toc -->
+
+<ul>
+<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF">服务端</a></li>
+<li><a href="#web%E7%AB%AF">Web端</a><ul>
+<li><a href="#%E5%8F%97%E7%90%86%E5%BB%BA%E5%8D%95">受理（建单）</a></li>
+</ul>
+</li>
+</ul>
+<!-- tocstop -->
+
+<h2><span id="服务端">服务端</span></h2><h2><span id="web端">Web端</span></h2><h3><span id="受理建单">受理（建单）</span></h3><blockquote>
+<p><strong>常规</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>名称</strong></th>
+<th><strong>参数</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>请求方式</td>
+<td><strong><code>POST</code></strong></td>
+</tr>
+<tr>
+<td>URL地址</td>
+<td>ida50&#x2F;manage&#x2F;execute&#x2F;manage&#x2F;createBill</td>
+</tr>
+<tr>
+<td>入参类型</td>
+<td><strong><code>application/json</code></strong></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>数据</strong></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>字段&#x2F;属性</th>
+<th>注释</th>
+<th>格式（默认String）</th>
+<th>默认值</th>
+<th>案例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>specialtyId</td>
+<td>专业id</td>
+<td>Long</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>bigSpecialtyId</td>
+<td>专业父级id</td>
+<td>Long</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>billTitle</td>
+<td>工单主题</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>fileIdList</td>
+<td>附件id</td>
+<td>Long[]</td>
+<td></td>
+<td>[1,2,3,4,5]</td>
+</tr>
+<tr>
+<td>billText</td>
+<td>表单内容</td>
+<td>Object[]</td>
+<td></td>
+<td>[<br>        {<br>            “fieldId”: “worktype”,<br>            “fieldName”: “派单类型”,<br>            “fieldValue”: “rgsfsadfs”<br>        },<br>        {<br>            “fieldId”: “zzdFaulttype”,<br>            “fieldName”: “专业类型”,<br>            “fieldValue”: “abcde”<br>        }<br>]</td>
+</tr>
+<tr>
+<td>urgent</td>
+<td>紧急程度</td>
+<td></td>
+<td>“N”</td>
+<td></td>
+</tr>
+<tr>
+<td>finishTime</td>
+<td>预计完成时间&#x2F;需要完成时间</td>
+<td></td>
+<td></td>
+<td>“2023-09-05 12:00:00”</td>
+</tr>
+<tr>
+<td>readOper</td>
+<td>阅示人员&#x2F;人员</td>
+<td></td>
+<td></td>
+<td>参考入参示例</td>
+</tr>
+<tr>
+<td>verifyOper</td>
+<td>审批人员</td>
+<td></td>
+<td></td>
+<td>参考入参示例</td>
+</tr>
+<tr>
+<td>mainOper</td>
+<td>主办岗位&#x2F;人员</td>
+<td></td>
+<td></td>
+<td>参考入参示例</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>请求参数</strong></p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;verifyOper&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[&#123;\&quot;id\&quot;:\&quot;132718\&quot;,\&quot;nodeId\&quot;:\&quot;132718\&quot;,\&quot;nodeName\&quot;:\&quot;朱轶卿\&quot;,\&quot;parentId\&quot;:\&quot;142420\&quot;,\&quot;nodeType\&quot;:\&quot;E\&quot;&#125;,&#123;\&quot;id\&quot;:\&quot;128308\&quot;,\&quot;nodeId\&quot;:\&quot;128308\&quot;,\&quot;nodeName\&quot;:\&quot;朱阳芳\&quot;,\&quot;parentId\&quot;:\&quot;142420\&quot;,\&quot;nodeType\&quot;:\&quot;E\&quot;&#125;]&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;mainOper&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[&#123;\&quot;id\&quot;:\&quot;132718\&quot;,\&quot;nodeId\&quot;:\&quot;132718\&quot;,\&quot;nodeName\&quot;:\&quot;朱轶卿\&quot;,\&quot;parentId\&quot;:\&quot;142420\&quot;,\&quot;nodeType\&quot;:\&quot;E\&quot;&#125;]&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;readOper&quot;</span><span class="punctuation">:</span> <span class="string">&quot;[&#123;\&quot;id\&quot;:\&quot;132718\&quot;,\&quot;nodeId\&quot;:\&quot;132718\&quot;,\&quot;nodeName\&quot;:\&quot;朱轶卿\&quot;,\&quot;parentId\&quot;:\&quot;142420\&quot;,\&quot;nodeType\&quot;:\&quot;E\&quot;&#125;,&#123;\&quot;id\&quot;:\&quot;128308\&quot;,\&quot;nodeId\&quot;:\&quot;128308\&quot;,\&quot;nodeName\&quot;:\&quot;朱阳芳\&quot;,\&quot;parentId\&quot;:\&quot;142420\&quot;,\&quot;nodeType\&quot;:\&quot;E\&quot;&#125;]&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;finishTime&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2023-09-05 12:00:00&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;urgent&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Y&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;billText&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;fieldId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;worktype&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;fieldName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;派单类型&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;fieldValue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;rgsfsadfs&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span><span class="punctuation">,</span></span><br><span class="line">        <span class="punctuation">&#123;</span></span><br><span class="line">            <span class="attr">&quot;fieldId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;zzdFaulttype&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;fieldName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;专业类型&quot;</span><span class="punctuation">,</span></span><br><span class="line">            <span class="attr">&quot;fieldValue&quot;</span><span class="punctuation">:</span> <span class="string">&quot;abcde&quot;</span></span><br><span class="line">        <span class="punctuation">&#125;</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;fileIdList&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">        <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">        <span class="number">2</span><span class="punctuation">,</span></span><br><span class="line">        <span class="number">3</span><span class="punctuation">,</span></span><br><span class="line">        <span class="number">4</span><span class="punctuation">,</span></span><br><span class="line">        <span class="number">5</span></span><br><span class="line">    <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;specialtyId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;119710&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;bigSpecialtyId&quot;</span><span class="punctuation">:</span> <span class="string">&quot;119709&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;billTitle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;管理工单测试单&quot;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p><strong>响应结果</strong></p>
+</blockquote>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    <span class="attr">&quot;code&quot;</span><span class="punctuation">:</span> <span class="number">1</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;msg&quot;</span><span class="punctuation">:</span> <span class="string">&quot;操作成功&quot;</span><span class="punctuation">,</span></span><br><span class="line">    <span class="attr">&quot;data&quot;</span><span class="punctuation">:</span> <span class="punctuation">&#123;</span></span><br><span class="line">        <span class="attr">&quot;billId&quot;</span><span class="punctuation">:</span> <span class="number">1136127</span><span class="punctuation">,</span></span><br><span class="line">        <span class="attr">&quot;billSn&quot;</span><span class="punctuation">:</span> <span class="string">&quot;MA2023091800473&quot;</span></span><br><span class="line">    <span class="punctuation">&#125;</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+
+
+
+
+</div></article></div></main><footer><div class="paginator"><a class="next" href="/dev_doc/2023/07/04/%E6%B5%99%E6%B1%9F%E7%94%B5%E4%BF%A1%E8%BF%90%E8%90%A5%E8%B0%83%E5%BA%A6%E4%B8%AD%E5%BF%83-%E5%89%B2%E6%8E%A5%E6%A8%A1%E5%9D%97/">next</a></div><div class="copyright"><p>&copy; 2023 <a href="https://gitee.com/eternal0918/dev_doc.git">zxp</a>.<br>Powered by ZXP &amp; <a target="_blank">ETERNAL</a>.</p></div></footer></div></body></html>
